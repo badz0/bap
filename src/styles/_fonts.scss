@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'FuturaPTHeavy';
+    src: url('../assets/fonts/FuturaPTHeavy.eot');
+    src: url('../assets/fonts/FuturaPTHeavy.eot') format('embedded-opentype'),
+         url('../assets/fonts/FuturaPTHeavy.woff2') format('woff2'),
+         url('../assets/fonts/FuturaPTHeavy.woff') format('woff'),
+         url('../assets/fonts/FuturaPTHeavy.ttf') format('truetype'),
+         url('../assets/fonts/FuturaPTHeavy.svg#FuturaPTHeavy') format('svg');
+}
+@font-face {
+    font-family: 'FuturaPTBold';
+    src: url('../assets/fonts/FuturaPTBold.eot');
+    src: url('../assets/fonts/FuturaPTBold.eot') format('embedded-opentype'),
+         url('../assets/fonts/FuturaPTBold.woff2') format('woff2'),
+         url('../assets/fonts/FuturaPTBold.woff') format('woff'),
+         url('../assets/fonts/FuturaPTBold.ttf') format('truetype'),
+         url('../assets/fonts/FuturaPTBold.svg#FuturaPTBold') format('svg');
+}
+@font-face {
+    font-family: 'FuturaPTDemi';
+    src: url('../assets/fonts/FuturaPTDemi.eot');
+    src: url('../assets/fonts/FuturaPTDemi.eot') format('embedded-opentype'),
+         url('../assets/fonts/FuturaPTDemi.woff2') format('woff2'),
+         url('../assets/fonts/FuturaPTDemi.woff') format('woff'),
+         url('../assets/fonts/FuturaPTDemi.ttf') format('truetype'),
+         url('../assets/fonts/FuturaPTDemi.svg#FuturaPTDemi') format('svg');
+}
+@font-face {
+    font-family: 'FuturaPTBook';
+    src: url('../assets/fonts/FuturaPTBook.eot');
+    src: url('../assets/fonts/FuturaPTBook.eot') format('embedded-opentype'),
+         url('../assets/fonts/FuturaPTBook.woff2') format('woff2'),
+         url('../assets/fonts/FuturaPTBook.woff') format('woff'),
+         url('../assets/fonts/FuturaPTBook.ttf') format('truetype'),
+         url('../assets/fonts/FuturaPTBook.svg#FuturaPTBook') format('svg');
+}
+@font-face {
+    font-family: 'FuturaPTMedium';
+    src: url('../assets/fonts/FuturaPTMedium.eot');
+    src: url('../assets/fonts/FuturaPTMedium.eot') format('embedded-opentype'),
+         url('../assets/fonts/FuturaPTMedium.woff2') format('woff2'),
+         url('../assets/fonts/FuturaPTMedium.woff') format('woff'),
+         url('../assets/fonts/FuturaPTMedium.ttf') format('truetype'),
+         url('../assets/fonts/FuturaPTMedium.svg#FuturaPTMedium') format('svg');
+}
+
+
+@mixin font-heavy {
+  font-family: 'FuturaPTHeavy', sans-serif;
+}
+@mixin font-bold {
+  font-family: 'FuturaPTBold', sans-serif;
+}
+@mixin font-demi {
+  font-family: 'FuturaPTDemi', sans-serif;
+}
+@mixin font-book {
+  font-family: 'FuturaPTBook', sans-serif;
+}
+@mixin font-medium {
+  font-family: 'FuturaPTMedium', sans-serif;
+}
+

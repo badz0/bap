@@ -1,0 +1,52 @@
+@import '../../../../styles/variables';
+
+.header {
+  background-color: $main-green;
+  height: 5rem;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+  .logo {
+    margin-top: 0.2rem;
+    img {
+      height: 4.5rem;
+    }
+  }
+
+  .navigation {
+    height: 5rem;
+    padding-top: 1.5rem;
+    a {
+      padding: 0 1rem;
+      display: inline-block;
+      //height: 100%;
+      //vertical-align: middle;
+      //line-height: 1.25;
+      //text-align: center;
+    }
+
+    a:hover {
+      background-color: $super-light-green;
+    }
+  }
+  .navigation__search-button {
+    img {
+      height: 1.7rem;
+    }
+  }
+
+  .header__login-button {
+    background-color: $light-green;
+    height: 100%;
+    img {
+      display: block;
+      margin: 0.4rem auto;
+    }
+    a {
+      display: block;
+      text-align: center;
+      padding: 0.3rem 0;
+    }
+  } 
+}

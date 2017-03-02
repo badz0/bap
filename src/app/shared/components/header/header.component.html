@@ -1,0 +1,43 @@
+<div class="header row">
+  <div class="logo col-md-4 col-md-offset-1 col-sm-3">
+    <a [routerLink]=" ['./'] " routerLinkActive="" [routerLinkActiveOptions]= "{exact: true}">
+      <img src="assets/img/bap-logo.png" alt="Логотип">
+    </a>
+  </div>
+  <div class="navigation col-md-6 col-sm-7">
+    <a [routerLink]=" ['./'] "
+      routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+      {{ 'Головна' | uppercase }} 
+    </a>
+    <a [routerLink]=" ['./'] "
+      routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+      {{ 'Аукціон' | uppercase }} 
+    </a>
+    <a [routerLink]=" ['./'] "
+      routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+      {{ 'Новини' | uppercase }} 
+    </a>
+    <a [routerLink]=" ['./'] "
+      routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+      {{ 'Статистика' | uppercase }} 
+    </a>
+    <a [routerLink]=" ['./'] "
+      routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+      {{ 'Бонуси' | uppercase }} 
+    </a>
+    <a [routerLink]=" ['./'] "
+      routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+      {{ 'Інше' | uppercase }} 
+    </a>
+    <a class="navigation__search-button" [routerLink]=" ['./'] "
+      routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+      <img src="assets/icon/search-tool.png" alt="Пошук">
+    </a>
+  </div>
+  <div class="header__login-button col-md-1 col-sm-2">
+    <img src="assets/icon/man-icon.png" alt="Іконка юзера">
+    <a [routerLink]=" ['./'] ">
+      {{ 'Увійти' | uppercase }} 
+    </a>
+  </div>
+</div>
