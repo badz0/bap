@@ -21,31 +21,29 @@ import { CollapseModule } from 'ng2-bootstrap';
  */
 import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
-// App is our top level component
 import { AppComponent } from './app.component';
 import { NoContentComponent } from './shared/components/no-content';
+import { MainPageComponent } from './components/main-page';
 import { HeaderComponent } from './shared/components/header';
+import { CarouselModule } from 'ng2-bootstrap/carousel';
 
-// import '../styles/styles.scss';
-
-/**
- * `AppModule` is the main entry point into Angular2's bootstraping process
- */
 @NgModule({
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
+    MainPageComponent,
     NoContentComponent,
     HeaderComponent
   ],
-  imports: [ // import Angular's modules
+  imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    CarouselModule.forRoot()
   ],
-  providers: [ // expose our Services and Providers into Angular's dependency injection
+  providers: [
     ENV_PROVIDERS,
   ]
 })
