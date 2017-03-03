@@ -15,6 +15,7 @@ import {
   PreloadAllModules
 } from '@angular/router';
 
+import { CollapseModule } from 'ng2-bootstrap';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -41,7 +42,8 @@ import { HeaderComponent } from './shared/components/header';
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+    CollapseModule.forRoot()
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
     ENV_PROVIDERS,

@@ -7,8 +7,9 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-header',
   styleUrls: ['header.component.scss'],
-  templateUrl: 'header.component.html', 
+  templateUrl: 'header.component.html'
 })
 export class HeaderComponent implements OnInit {
+  public isCollapsed: boolean = true;
   public ngOnInit() {}
 }
