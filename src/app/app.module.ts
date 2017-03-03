@@ -15,6 +15,10 @@ import {
   PreloadAllModules
 } from '@angular/router';
 
+import { CollapseModule } from 'ng2-bootstrap';
+/*
+ * Platform and Environment providers/directives/pipes
+ */
 import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
@@ -35,8 +39,9 @@ import { CarouselModule } from 'ng2-bootstrap/carousel';
     BrowserModule,
     FormsModule,
     HttpModule,
-    CarouselModule.forRoot(),
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
+    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+    CollapseModule.forRoot(),
+    CarouselModule.forRoot()
   ],
   providers: [
     ENV_PROVIDERS,

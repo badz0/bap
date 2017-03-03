@@ -4,7 +4,22 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 html, body {
   height: 100%;
-  @include font-heavy;
-  font-size: 14px;
+  max-width: 1366px;
   min-width: 320px;
+  @include font-heavy;
+  font-size: 12px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) { 
+    html, body {
+    font-size: 13px;
+  }
+}
+@media (min-width: 992px) { 
+    html, body {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1200px) { 
+  font-size: 14px;
 }
