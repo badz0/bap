@@ -6,4 +6,5 @@ html, body {
   height: 100%;
   @include font-heavy;
   font-size: 14px;
+  min-width: 320px;
 }
