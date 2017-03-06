@@ -14,22 +14,22 @@
       <ul class="navigation nav navbar-nav navbar-right">
         <li>
           <a [routerLink]=" ['./'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            {{ 'Головна' | uppercase }} 
+            {{ 'Головна' | uppercase }}
           </a>
         </li>
         <li>
           <a [routerLink]=" ['./'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            {{ 'Аукціон' | uppercase }} 
+            {{ 'Аукціон' | uppercase }}
           </a>
         </li>
         <li>
           <a [routerLink]=" ['./'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            {{ 'Новини' | uppercase }} 
+            {{ 'Новини' | uppercase }}
           </a>
         </li>
         <li>
           <a [routerLink]=" ['./'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            {{ 'Статистика' | uppercase }} 
+            {{ 'Статистика' | uppercase }}
           </a>
         </li>
         <li>
@@ -40,9 +40,9 @@
       </ul>
     </div>
     <div class="header__login-button">
-      <img src="assets/icon/man-icon.png" alt="Іконка юзера">
-      <a [routerLink]=" ['./'] ">
-        {{ 'Увійти' | uppercase }} 
+      <a [routerLink]=" ['./login'] ">
+        <img src="assets/icon/man-icon.png" alt="Іконка юзера">
+        {{ 'Увійти' | uppercase }}
       </a>
     </div>
   </div>
