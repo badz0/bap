@@ -168,10 +168,10 @@ module.exports = function (options) {
           exclude: [helpers.root('src', 'styles')]
         },
 
-        {
-          test: /\.(woff2?|ttf|eot|svg)$/,
-          loader: 'url-loader?limit=10000'
-        },
+        // {
+        //   test: /\.(woff2?|ttf|eot|svg)$/,
+        //   loader: 'url-loader?limit=10000'
+        // },
 
         /* Raw loader support for *.html
          * Returns file content as string
@@ -194,10 +194,10 @@ module.exports = function (options) {
 
         /* File loader for supporting fonts, for example, in CSS files.
         */
-        // {
-        //   test: /\.(eot|woff2?|svg|ttf)([\?]?.*)$/,
-        //   use: 'file-loader'
-        // }
+        {
+          test: /\.(eot|woff2?|svg|ttf)([\?]?.*)$/,
+          use: 'file-loader'
+        }
 
       ],
 

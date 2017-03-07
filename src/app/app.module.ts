@@ -16,6 +16,7 @@ import {
 } from '@angular/router';
 
 import { CollapseModule } from 'ng2-bootstrap';
+import { CarouselModule } from 'ng2-bootstrap/carousel';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -25,7 +26,9 @@ import { AppComponent } from './app.component';
 import { NoContentComponent } from './shared/components/no-content';
 import { MainPageComponent } from './components/main-page';
 import { HeaderComponent } from './shared/components/header';
-import { CarouselModule } from 'ng2-bootstrap/carousel';
+
+import { ProfileModule } from './components/profile';
+// import '../styles/styles.scss';
 
 @NgModule({
   bootstrap: [ AppComponent ],
@@ -41,7 +44,8 @@ import { CarouselModule } from 'ng2-bootstrap/carousel';
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
     CollapseModule.forRoot(),
-    CarouselModule.forRoot()
+    CarouselModule.forRoot(),
+    // ProfileModule
   ],
   providers: [
     ENV_PROVIDERS,

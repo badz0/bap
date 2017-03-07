@@ -40,13 +40,13 @@ $paragraph-font-size: (null: 1.5em, $md: 1.5em, $sm: 1.3em, $xs: 1.1em);
   @include font-size-map($paragraph-font-size);
   display: block;
   &-background {
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 5.05rem);
     background-position: 50% 50%;
     background-size: cover;
     background-image: url(/assets/img/bap-img-one.jpg);
   }
   &-background-two {
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 5.05rem);
     background-position: 50% 50%;
     background-size: cover;
     background-image: url(/assets/img/bap-img-two.jpg);

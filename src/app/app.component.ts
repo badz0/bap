@@ -8,16 +8,8 @@ import {
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
   styleUrls: [
-    './app.component.scss'
+    './app.component.scss',
   ],
   templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit {
-
-  constructor(
-  ) {}
-
-  public ngOnInit() {
-  }
-
-}
+export class AppComponent {}
