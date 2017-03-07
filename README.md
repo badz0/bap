@@ -1,5 +1,9 @@
-#in bap_server npm install
-#npm install -g nodemon
-#in terminal bap_server type nodemon
-#start angular-webpack starter
-#check if everything still working)))
+<p>#in bap_server npm install</p>
+<p>#npm install -g nodemon</p>
+<p>#in terminal bap_server type nodemon</p>
+<p>#start angular-webpack starter</p>
+<p>#check if everything still working)))</p>
+
+
+
+
