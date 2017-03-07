@@ -14,6 +14,7 @@ import {
   RouterModule,
   PreloadAllModules
 } from '@angular/router';
+import {ToasterModule, ToasterService} from 'angular2-toaster';
 
 import { CollapseModule } from 'ng2-bootstrap';
 /*
@@ -45,10 +46,12 @@ import { CarouselModule } from 'ng2-bootstrap/carousel';
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
     CollapseModule.forRoot(),
+    ToasterModule,
     CarouselModule.forRoot()
   ],
   providers: [
     ENV_PROVIDERS,
+    ToasterService
   ]
 })
 export class AppModule {}
