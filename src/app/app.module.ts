@@ -14,9 +14,10 @@ import {
   RouterModule,
   PreloadAllModules
 } from '@angular/router';
-import {ToasterModule, ToasterService} from 'angular2-toaster';
+import { ToasterModule, ToasterService } from 'angular2-toaster';
 
 import { CollapseModule } from 'ng2-bootstrap';
+import { CarouselModule } from 'ng2-bootstrap/carousel';
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -28,7 +29,9 @@ import { LoginComponent } from './components/login';
 import { MainPageComponent } from './components/main-page';
 import { RegistrationComponent } from './components/registration';
 import { HeaderComponent } from './shared/components/header';
-import { CarouselModule } from 'ng2-bootstrap/carousel';
+
+import { ProfileModule } from './components/profile';
+// import '../styles/styles.scss';
 
 @NgModule({
   bootstrap: [ AppComponent ],

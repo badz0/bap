@@ -1,0 +1,26 @@
+@import '../../../../styles/variables';
+
+.profile-menu {
+  background-color: $light-green;
+  font-size: 0.9rem;
+  ul {
+    text-align: center;
+    margin: 0.4rem 0;
+    li {
+      display: inline-block;
+      a {
+        color: $white;
+        padding: 0.5rem;
+        margin: 0 0.5rem;
+        &:hover {
+          background-color: $super-light-green;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  .active {
+    background-color: $super-light-green;
+    border-radius: 5px;
+  }
+}

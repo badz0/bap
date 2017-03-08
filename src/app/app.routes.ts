@@ -7,6 +7,8 @@ import { RegistrationComponent } from './components/registration';
 
 export const ROUTES: Routes = [
   { path: '',    component: MainPageComponent },
+  { path: 'main-page',    component: MainPageComponent },
+  { path: 'profile', loadChildren: './components/profile#ProfileModule' },
   { path: 'login',    component: LoginComponent },
   { path: 'registration',    component: RegistrationComponent },
   { path: '**',    component: NoContentComponent },

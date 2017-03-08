@@ -1,40 +1,4 @@
-@import '../../../../styles/variables';
-@mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
-    @if $mq2 == false {
-        @media ($maxmin: $mq01) {
-            @content;
-        }
-    }
-    @else {
-        @media (min-width: $mq01) and (max-width: $mq2) {
-            @content;
-        }
-    }
-}
-
-// breakpoint variables
-$lg: 1170px;
-$md: 1024px;
-$sm: 640px;
-$xs: 480px;
-
-// responsive font size mixin
-@mixin font-size-map($font-size-map) {
-    @each $breakpoint, $font-size in $font-size-map {
-        @if $breakpoint == null {
-            font-size: $font-size;
-        } @else {
-            @include breakpoint($breakpoint) {
-                font-size: $font-size;
-            }
-        }
-    }
-}
-
-// font sizes
-$heading-font-size: (null: 4.319em, $lg: 4.319em, $md: 4.119em, $sm: 3.919em, $xs: 3.519em);
-
-$paragraph-font-size: (null: 2.8em, $md: 2.7em, $sm: 2.5em, $xs: 2.3em);
+ @import '../../../../styles/variables';
 
 .header {
   background-color: $main-green;
@@ -62,22 +26,13 @@ $paragraph-font-size: (null: 2.8em, $md: 2.7em, $sm: 2.5em, $xs: 2.3em);
     }
   }
   .navigation {
-    //height: 5rem;
-    //padding-top: 1.5rem;
     margin: 0.6rem 3rem 0;
-    
     a {
-      //padding: 0 1rem;
-      //display: inline-block;
-      //height: 100%;
-      //vertical-align: middle;
-      //line-height: 1.25;
+      &:hover {
+         background-color: $light-green;
+         border-radius: 20px;
+      }
       text-align: center;
-      //height: 5rem;
-    }
-
-    a:hover {
-      background-color: $super-light-green;
     }
   }
   .navigation__search-button {
@@ -86,23 +41,43 @@ $paragraph-font-size: (null: 2.8em, $md: 2.7em, $sm: 2.5em, $xs: 2.3em);
     }
   }
 
-  .header__login-button {
+  .header__login, .header__profile {
     position: absolute;
     top: 0;
     right:0;
-    background-color: $light-green;
     height: 5rem;
     width: 5rem;
-    //display: inline-block;
-    //float: right;
-    img {
-      display: block;
-      margin: 0.4rem auto;
-    }
+    font-size: 0.8rem;
     a {
       display: block;
+      height: 100%;
+    }
+    &:hover {
+      background-color: $light-green;
+    }
+    img {
+      display: block;
+      padding: 0.4rem 0;
+      margin: 0 auto;
+    }
+    p {
       text-align: center;
-      padding: 0.3rem 0;
+      margin: 0;
+      img {
+        display: inline;
+      }
+    }
+    .active {
+      border-radius: 0px;
+      p img {
+        transform: rotate(180deg);
+      }
     }
   }
+  .active {
+    background-color: $light-green;
+    border-radius: 20px;
+  }
+
 }
+

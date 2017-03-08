@@ -8,19 +8,11 @@ html, body {
   max-width: 1366px;
   min-width: 320px;
   @include font-heavy;
-  font-size: 12px;
+  font-size: 11px;
   margin: 0 auto;
-}
-@media (min-width: 768px) {
+} 
+@media (min-width: 768px) { 
     html, body {
     font-size: 13px;
   }
-}
-@media (min-width: 992px) {
-    html, body {
-    font-size: 14px;
-  }
-}
-@media (min-width: 1200px) {
-  font-size: 14px;
 }
