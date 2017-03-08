@@ -15,7 +15,7 @@ import { HeaderConstants } from './header.constants';
 export class HeaderComponent implements OnInit {
   public menuCollapsed: boolean = true;
   public pages;
-  private logedIn: boolean = true;
+  private logedIn: boolean = false;
 
   constructor(private constants: HeaderConstants) {}
 

@@ -35,7 +35,7 @@
       </ul>
     </div>
     <div *ngIf="!isLogedIn" class="header__login">
-      <a [routerLink]=" ['./profile'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a [routerLink]=" ['./login'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <img src="assets/icon/man-icon.png" alt="Іконка юзера">
         <p>
           {{ 'Увійти' | uppercase }} 
