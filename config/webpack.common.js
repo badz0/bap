@@ -184,7 +184,7 @@ module.exports = function (options) {
           exclude: [helpers.root('src/index.html')]
         },
 
-        /* 
+        /*
          * File loader for supporting images, for example, in CSS files.
          */
         {
@@ -210,7 +210,7 @@ module.exports = function (options) {
      */
     plugins: [
       new AssetsPlugin({
-        path: helpers.root('dist'),
+        path: helpers.root(process.env.BUILD_PATH || '../bap_server/public'),
         filename: 'webpack-assets.json',
         prettyPrint: true
       }),

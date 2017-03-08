@@ -14,6 +14,7 @@ import {
   RouterModule,
   PreloadAllModules
 } from '@angular/router';
+import { ToasterModule, ToasterService } from 'angular2-toaster';
 
 import { CollapseModule } from 'ng2-bootstrap';
 import { CarouselModule } from 'ng2-bootstrap/carousel';
@@ -24,7 +25,9 @@ import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { NoContentComponent } from './shared/components/no-content';
+import { LoginComponent } from './components/login';
 import { MainPageComponent } from './components/main-page';
+import { RegistrationComponent } from './components/registration';
 import { HeaderComponent } from './shared/components/header';
 
 import { ProfileModule } from './components/profile';
@@ -34,7 +37,9 @@ import { ProfileModule } from './components/profile';
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
+    LoginComponent,
     MainPageComponent,
+    RegistrationComponent,
     NoContentComponent,
     HeaderComponent
   ],
@@ -44,11 +49,12 @@ import { ProfileModule } from './components/profile';
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
     CollapseModule.forRoot(),
-    CarouselModule.forRoot(),
-    // ProfileModule
+    ToasterModule,
+    CarouselModule.forRoot()
   ],
   providers: [
     ENV_PROVIDERS,
+    ToasterService
   ]
 })
 export class AppModule {}
