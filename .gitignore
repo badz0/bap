@@ -32,6 +32,7 @@ logs
 
 # Node Files #
 /bp_front-end/node_modules/
+bp_server/node_modules/
 /bp_server/node_modules/
 /bp_front-end/bower_components/
 npm-debug.log
