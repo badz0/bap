@@ -24,7 +24,9 @@ export class RegistrationComponent implements OnInit {
               private registrationService: RegistrationService,
               private toasterService: ToasterService) {}
 
-  public ngOnInit() {}
+  public ngOnInit() {
+    console.log('Registration Page');
+  }
 
   public clearAllFields() {
     this.name = '';
@@ -50,8 +52,12 @@ export class RegistrationComponent implements OnInit {
       if (data.success) {
         this.toasterService.pop('success', user.username + ' registered', 'Now you can log in');
         this.clearAllFields();
+      } else if (data.emailTaken) {
+        this.toasterService.pop('warning', 'email is already registered');
+      } else if (data.usernameTaken) {
+        this.toasterService.pop('warning', 'username is already registered');
       } else {
-        this.toasterService.pop('warning', 'Check all fields');
+        this.toasterService.pop('warning', 'check all fields');
       }
     });
   };

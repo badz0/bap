@@ -4,6 +4,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/database');
 const User = require('../models/user');
+const _ = require('lodash');
 
 //register
 router.post('/register', (req, res, next) => {
@@ -16,13 +17,34 @@ router.post('/register', (req, res, next) => {
     password: req.body.password,
     agreement: req.body.agreement
   });
-  User.addUser(newUser, (err, user) => {
+  User.find( { $or:[{username: newUser.username}, {email: newUser.email}]} ,
+            function(err, users){
     if(err) {
-      res.json({success: false, nsg: 'Failed to register user'});
-    } else {
-      res.json({success: true, nsg: 'User registered'});
+      return next(err);
+    } else if(users) {
+      if (_.find(users , {email: newUser.email})){
+        newUser.invalidate('email', 'email is already registered');
+        res.json({emailTaken: true, nsg: 'email is already registered'});
+        next( new Error("email is already registered"));
+      }
+      else if (_.find(users , {username: newUser.username})){
+        newUser.invalidate('username', 'username is already taken');
+        res.json({usernameTaken: true, nsg: 'username is already registered'});
+        next( new Error("username is already taken"));
+      } else {
+        User.addUser(newUser, (err, user) => {
+          if(err) {
+            res.json({success: false, nsg: 'Failed to register user'});
+          } else {
+            res.json({success: true, nsg: 'User registered'});
+          }
+        })
+      }
     }
-  })
+    else{
+      next();
+    }
+  });
 });
 
 //authenticate

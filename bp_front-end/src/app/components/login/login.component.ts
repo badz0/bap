@@ -19,7 +19,9 @@ export class LoginComponent implements OnInit {
               private loginService: LoginService,
               private toasterService: ToasterService) {
   }
-  public ngOnInit() {}
+  public ngOnInit() {
+    console.log('Login Page');
+  }
 
   public onLogin() {
     const user = {
