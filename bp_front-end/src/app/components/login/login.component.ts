@@ -13,7 +13,7 @@ import { ToasterService } from 'angular2-toaster';
   providers: [ LoginService ]
 })
 export class LoginComponent implements OnInit {
-  public username: string;
+  public email: string;
   public password: string;
   constructor(private router: Router,
               private loginService: LoginService,
@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
 
   public onLogin() {
     const user = {
-      username: this.username,
+      email: this.email,
       password: this.password
     };
     this.loginService.authenticateUser(user).subscribe((data) => {
