@@ -49,6 +49,7 @@ npm-debug.log
 # Dist #
 /bp_front-end/dist
 /bp_front-end/public/__build__/
+/bp_server/public/
 /bp_front-end/src/*/__build__/
 /bp_front-end/__build__/**
 /bp_front-end/public/dist/
@@ -63,6 +64,7 @@ npm-debug.log
 /bp_front-end/doc/
 
 # IDE #
+.vscode/
 .idea/
 *.swp
 

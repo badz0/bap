@@ -14,17 +14,17 @@
       <ul class="navigation nav navbar-nav navbar-right">
         <li>
           <a [routerLink]=" ['./'+pages.auction] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            {{ 'Аукціон' | uppercase }} 
+            {{ 'Аукціон' | uppercase }}
           </a>
         </li>
         <li>
           <a [routerLink]=" ['./statistic'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            {{ 'Статистика' | uppercase }} 
+            {{ 'Статистика' | uppercase }}
           </a>
         </li>
         <li>
           <a [routerLink]=" ['./news'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            {{ 'Новини' | uppercase }} 
+            {{ 'Новини' | uppercase }}
           </a>
         </li>
         <li *ngIf="isLogedIn">
@@ -35,10 +35,10 @@
       </ul>
     </div>
     <div *ngIf="!isLogedIn" class="header__login">
-      <a [routerLink]=" ['./profile'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a [routerLink]=" ['./login'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <img src="assets/icon/man-icon.png" alt="Іконка юзера">
         <p>
-          {{ 'Увійти' | uppercase }} 
+          {{ 'Увійти' | uppercase }}
         </p>
       </a>
     </div>

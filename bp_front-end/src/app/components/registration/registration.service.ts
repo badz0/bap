@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { Http, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -10,9 +10,8 @@ export class RegistrationService {
   constructor(private http: Http) {}
 
   public registerUser(user) {
-    let headers = new Headers();
-    headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:8080/users/register', user, {headers: headers})
+    let options = new RequestOptions({headers: new Headers({'Content-Type': 'application/json'})});
+    return this.http.post('http://localhost:8080/users/register', user, options)
       .map((res) => res.json());
   }
 }

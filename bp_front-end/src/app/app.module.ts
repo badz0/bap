@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {
   NgModule,
@@ -26,12 +26,13 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { NoContentComponent } from './shared/components/no-content';
 import { LoginComponent } from './components/login';
+import { LoginService } from './components/login/login.service';
 import { MainPageComponent } from './components/main-page';
 import { RegistrationComponent } from './components/registration';
 import { HeaderComponent } from './shared/components/header';
-
 import { ProfileModule } from './components/profile';
 // import '../styles/styles.scss';
+import { AuthGuard } from './shared/guard/auth.guard';
 
 @NgModule({
   bootstrap: [ AppComponent ],
@@ -46,6 +47,7 @@ import { ProfileModule } from './components/profile';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
     CollapseModule.forRoot(),
@@ -54,7 +56,9 @@ import { ProfileModule } from './components/profile';
   ],
   providers: [
     ENV_PROVIDERS,
-    ToasterService
+    ToasterService,
+    LoginService,
+    AuthGuard
   ]
 })
 export class AppModule {}

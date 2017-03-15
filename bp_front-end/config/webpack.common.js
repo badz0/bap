@@ -210,7 +210,7 @@ module.exports = function (options) {
      */
     plugins: [
       new AssetsPlugin({
-        path: helpers.root(process.env.BUILD_PATH || '../bap_server/public'),
+        path: helpers.root(process.env.BUILD_PATH || '../bp_server/public'),
         filename: 'webpack-assets.json',
         prettyPrint: true
       }),
