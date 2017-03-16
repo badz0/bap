@@ -28,7 +28,7 @@ const port = 8080;
 app.use(cors());
 
 // set static folder
-app.use(express.static(path.join(__dirname, '../bap/dist')))
+app.use(express.static(path.join(__dirname, 'public')))
 //body parser middleware
 app.use(bodyParser.json());
 
@@ -42,7 +42,11 @@ app.use('/users', users);
 //index router
 app.get('/', (req, res) => {
   res.send('some text');
-})
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/index.html'));
+});
 
 //start server
 app.listen(port, () => {
