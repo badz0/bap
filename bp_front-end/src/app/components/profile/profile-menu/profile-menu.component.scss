@@ -1,6 +1,7 @@
 @import '../../../../styles/variables';
 
 .profile-menu {
+  font-family: 'FuturaPTMedium', sans-serif;
   background-color: $light-green;
   font-size: 0.9rem;
   ul {
@@ -12,7 +13,7 @@
         color: $white;
         padding: 0.5rem;
         margin: 0 0.5rem;
-        &:hover {
+        &:hover, &:focus {
           background-color: $super-light-green;
           border-radius: 5px;
         }
