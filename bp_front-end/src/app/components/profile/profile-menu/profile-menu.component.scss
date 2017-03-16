@@ -13,7 +13,7 @@
         color: $white;
         padding: 0.5rem;
         margin: 0 0.5rem;
-        &:hover {
+        &:hover, &:focus {
           background-color: $super-light-green;
           border-radius: 5px;
         }

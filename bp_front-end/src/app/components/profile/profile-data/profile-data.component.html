@@ -3,11 +3,11 @@
     <div class="row">
       <div class="col-sm-6 col-xs-12">
         <div class="profile__photo">
-          <img class="img-responsive" src="assets/img/profile-foto.jpg" alt="Фото профілю">
+          <img class="img-responsive" src="assets/img/profile-foto1.jpg" alt="Фото профілю">
         </div>
       </div>
-      <div class="profile__menu col-sm-6 col-xs-12">
-        <ul class="list-unstyled">
+      <div class="profile__data col-sm-6 col-xs-12">
+        <ul class="list-unstyled profile__data-labels">
           <li>
             <p>
               Логін:
@@ -39,35 +39,35 @@
             </p>
           </li>
         </ul>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled profile__data-values">
           <li>
             <p>
-               gorishok
+              {{ profileData.username | uppercase }}
             </p>
           </li>
           <li>
             <p>
-              Брюс
+              {{ profileData.name | uppercase }}
             </p>
           </li>
           <li>
             <p>
-              Вілліс
+              {{ profileData.lastname | uppercase }}
             </p>
           </li>
           <li>
             <p>
-              gorishok@gmail.com
+              {{ profileData.email | uppercase }}
             </p>
           </li>
           <li>
             <p>
-              22 березня 1992р.
+              {{ profileData.birthDate | date:'dd.MM.yyyy' }}
             </p>
           </li>
           <li>
             <p>
-              Зашків
+              {{ profileData.city | uppercase }}
             </p>
           </li>
         </ul>

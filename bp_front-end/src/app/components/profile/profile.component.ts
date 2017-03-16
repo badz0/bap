@@ -9,4 +9,8 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: 'profile.component.html',
   styleUrls: ['profile.component.scss']
 })
-export class ProfileComponent {}
+export class ProfileComponent implements OnInit {
+  public ngOnInit() {
+    console.log();
+  }
+}

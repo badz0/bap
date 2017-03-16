@@ -1,7 +1,10 @@
 <div class="header">
   <div class="container">
     <div class="navbar-header">
-      <a  class="logo" [routerLink]=" ['./'+pages.main] " routerLinkActive="" [routerLinkActiveOptions]="{exact: true}">
+      <a *ngIf="!isLogedIn()" class="logo" [routerLink]=" ['./main-page'] " routerLinkActive="" [routerLinkActiveOptions]="{exact: true}">
+        <img src="assets/img/bap-logo.png" alt="Логотип">
+      </a>
+      <a *ngIf="isLogedIn()" class="logo" [routerLink]=" ['./auction'] " routerLinkActive="" [routerLinkActiveOptions]="{exact: true}">
         <img src="assets/img/bap-logo.png" alt="Логотип">
       </a>
       <button (click)="menuCollapsed = !menuCollapsed" type="button" class="header__menu-btn navbar-toggle">
@@ -13,7 +16,7 @@
     <div [collapse]="menuCollapsed" class="navbar-collapse">
       <ul class="navigation nav navbar-nav navbar-right">
         <li>
-          <a [routerLink]=" ['./'+pages.auction] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a [routerLink]=" ['./auction'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
             {{ 'Аукціон' | uppercase }}
           </a>
         </li>
@@ -27,14 +30,14 @@
             {{ 'Новини' | uppercase }} 
           </a>
         </li>
-        <li *ngIf="isLogedIn">
+        <li *ngIf="isLogedIn()">
           <a class="navigation__search-button" [routerLink]=" ['./search'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
             <img src="assets/icon/search-tool.png" alt="Пошук">
           </a>
         </li>
       </ul>
     </div>
-    <div *ngIf="!isLogedIn" class="header__login">
+    <div *ngIf="!isLogedIn()" class="header__login">
       <a [routerLink]=" ['./login'] " routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
         <img src="assets/icon/man-icon.png" alt="Іконка юзера">
         <p>
@@ -42,12 +45,13 @@
         </p>
       </a>
     </div>
-    <div *ngIf="isLogedIn" class="header__profile">
+    <div *ngIf="isLogedIn()" class="header__profile">
       <a [routerLink]=" ['./profile'] " routerLinkActive="active">
-        <img src="assets/icon/man-icon.png" alt="Іконка юзера">
-        <p>
-          {{ 'Профіль' | uppercase }} <img src="assets/icon/profile-arrow-up.png" alt="">
-        </p>
+        <img src="assets/img/profile-foto.jpg" alt="Іконка юзера">
+        <!--<p>
+          {{ 'Профіль' | uppercase }} 
+          <img src="assets/icon/profile-arrow-up.png" alt="">
+        </p>-->
       </a>
     </div>
   </div>

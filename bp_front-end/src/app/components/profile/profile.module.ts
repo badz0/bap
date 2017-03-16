@@ -6,6 +6,8 @@ import { ProfileComponent } from './profile.component';
 import { ProfileMenuComponent } from './profile-menu';
 import { ProfileDataComponent } from './profile-data';
 
+import { ProfileService } from './profile.service';
+
 @NgModule({
   declarations: [
     ProfileComponent,
@@ -15,6 +17,9 @@ import { ProfileDataComponent } from './profile-data';
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+  ],
+  providers: [
+    ProfileService
   ],
   exports: [
   ]

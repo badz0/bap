@@ -85,8 +85,15 @@ router.post('/authenticate', (req, res, next) => {
 });
 
 // Profile
-router.get('/profile', passport.authenticate('jwt', {session: false}), (req, res, next) => {
-  res.json({user: req.user});
+router.get('/profile-data', passport.authenticate('jwt', {session: false}), (req, res, next) => {
+  res.json({
+    username: req.user.username,
+    name: req.user.name,
+    lastname: req.user.lastname,
+    email: req.user.email,
+    birthDate: req.user.birthDate,
+    city: 'Зашків'
+  });
 });
 
 module.exports = router;
