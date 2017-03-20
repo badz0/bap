@@ -1,0 +1,77 @@
+<div class="profile">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <div class="profile__photo">
+          <img class="img-responsive" src="assets/img/profile-foto1.jpg" alt="Фото профілю">
+        </div>
+      </div>
+      <div class="profile__data col-sm-6 col-xs-12">
+        <ul class="list-unstyled profile__data-labels">
+          <li>
+            <p>
+              Логін:
+            </p>
+          </li>
+          <li>
+            <p>
+              Ім'я:
+            </p>
+          </li>
+          <li>
+            <p>
+              Прізвище:
+            </p>
+          </li>
+          <li>
+            <p>
+              Ел. скринька:
+            </p>
+          </li>
+          <li>
+            <p>
+              Дата нар.:
+            </p>
+          </li>
+          <li>
+            <p>
+              Місто:
+            </p>
+          </li>
+        </ul>
+        <ul class="list-unstyled profile__data-values">
+          <li>
+            <p>
+              {{ profileData.username | uppercase }}
+            </p>
+          </li>
+          <li>
+            <p>
+              {{ profileData.name | uppercase }}
+            </p>
+          </li>
+          <li>
+            <p>
+              {{ profileData.lastname | uppercase }}
+            </p>
+          </li>
+          <li>
+            <p>
+              {{ profileData.email | uppercase }}
+            </p>
+          </li>
+          <li>
+            <p>
+              {{ profileData.birthDate | date:'dd.MM.yyyy' }}
+            </p>
+          </li>
+          <li>
+            <p>
+              {{ profileData.city | uppercase }}
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

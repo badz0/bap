@@ -1,0 +1,18 @@
+$icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'node_modules/angular2-toaster/toaster';
+@import '../styles/styles';
+
+html, body {
+  height: 100%;
+  max-width: 1366px;
+  min-width: 320px;
+  @include font-heavy;
+  font-size: 11px;
+  margin: 0 auto;
+} 
+@media (min-width: 768px) { 
+    html, body {
+    font-size: 13px;
+  }
+}

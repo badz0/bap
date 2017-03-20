@@ -1,0 +1,87 @@
+ @import '../../../../styles/variables';
+
+.header {
+  background-color: $main-green;
+  .container {
+    position: relative;
+  }
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+  .logo {
+    img {
+      padding: 0.5rem 0;
+      margin: 0 0 0 2rem;
+      height: 5rem;
+    }
+  }
+  .header__menu-btn {
+    margin-right: 5.5rem;
+    margin-top: 1rem;
+    border: 2.5px solid $white;
+    border-radius: 14px;
+    span {
+      background-color: $white;
+    }
+  }
+  .navigation {
+    margin: 0.6rem 3rem 0;
+    a {
+      &:hover, &:focus {
+         background-color: $light-green;
+         border-radius: 10px;
+      }
+      text-align: center;
+    }
+  }
+  .navigation__search-button {
+    img {
+      height: 1.7rem;
+    }
+  }
+
+  .header__login, .header__profile {
+    position: absolute;
+    top: 0;
+    right:0;
+    height: 5rem;
+    width: 5rem;
+    font-size: 0.8rem;
+    a {
+      display: block;
+      height: 100%;
+    }
+    &:hover, &:focus {
+      background-color: $light-green;
+    }
+    img {
+      display: block;
+      padding: 0.4rem 0;
+      margin: 0 auto;
+    }
+    p {
+      text-align: center;
+      margin: 0;
+    }
+    .active {
+      border-radius: 0px;
+      p img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .header__profile {
+    img {
+      height: 5rem;
+      padding: 0.3rem 0;
+      border-radius: 50%;
+    }
+  }
+  .active {
+    background-color: $light-green;
+    border-radius: 10px;
+  }
+
+}
+

@@ -1,0 +1,57 @@
+@import '../../../../styles/variables';
+$grey: #7f7f7f;
+$super-grey: #4c4c4c;
+.profile {
+  font-family: 'FuturaPTBold', sans-serif;
+  &__photo {
+    margin: 4rem auto 0;
+    width: 12rem;
+    height: 12rem;
+    float: right;
+    overflow: hidden;
+    border-radius: 50%;
+    img {
+        
+    }
+  }
+  &__data {
+    ul {
+      display: inline-block;
+      margin-top: 4rem;
+      margin-left: 1rem;
+    }
+    &-labels {
+      color: $grey;
+    }
+    &-values {
+      color: $super-grey;
+    }
+
+    a {
+      text-decoration: none;
+      color: $dark-grey;
+      display: block;
+      padding: 1rem;
+      &:hover {
+          background-color: $super-light-green;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .profile {
+    &__photo {
+      margin: 2rem auto;
+      float: none;
+    }
+
+    &__data {
+      text-align: center;
+      ul {
+        margin-top: 0;
+        text-align: left;
+      }
+    }
+  }
+} 
